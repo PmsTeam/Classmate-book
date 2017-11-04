@@ -1,0 +1,11 @@
+#footer
+{
+    position: absolute;
+    botton:0px;
+    width: 100%;
+    height: 20px;
+    clear: both;
+    text-align: center;
+    font-family: 宋体;
+    color: lightgray;
+}
