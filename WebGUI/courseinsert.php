@@ -1,0 +1,22 @@
+<?php
+	$tno=$_COOKIE['username'];
+	$coursename=$_POST['coursename'];
+	$gradescore=$_POST['gradescore'];
+	$ctime = $_POST['ctime'];
+	$caddress = $_POST['cadd'];
+	$cate = $_POST['gender'];
+	$notes = $_POST['comment'];
+	$limitpeople = $_POST['limitpeople'];
+	$grade = $_POST['grade'];
+	require 'linkDatebase.php';
+	$gcoursename = iconv("UTF-8","GBK//IGNORE",$coursename);
+	$gctime = iconv("UTF-8","GBK//IGNORE",$ctime);
+	$gcaddress = iconv("UTF-8","GBK//IGNORE",$caddress);
+	$gnotes = iconv("UTF-8","GBK//IGNORE",$notes);
+	$period = $gradescore * 16;
+	$str = "select cnumber from course where cname = '$coursename'";
+	$sql = odbc_exec($conn,$str);
+	$cno = odbc_result($sql,'cnumber');
+	$str = "insert into setCourse(cno,tno,ctime,caddress,limitpeople,grade)values('$cno','$tno','$gctime','$gcaddress',$limitpeople,$grade)";
+	$sql = odbc_exec($conn,$str);
+	echo odbc_result_all($sql);

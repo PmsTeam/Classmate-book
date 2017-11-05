@@ -1,0 +1,54 @@
+@import "header.css";
+@import "footer.css";
+body
+{
+
+}
+.bgsetting
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#logint
+{
+    width: 450px;
+    height:450px;
+    background:rgba(204,204,204,0.3);
+    position: relative;
+    left: 525px;
+    right: 525px;
+    top: 125px;
+}
+#logintitle
+{
+    position: absolute;
+    top: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    width: 100%;
+    font-family: 汉仪悠然体简;
+    color: #ffffcc;
+    font-size:150%;
+    opacity: 1;
+}
+#logincontent
+{
+    position: absolute;
+    margin-top: 80px;
+    width: 100%;
+}
+#loginitem
+{
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    font-family: 汉仪乐喵体简;
+}
+#loginform
+{
+    position: absolute;
+    right: 100px;
+    top: 62px;
+}
